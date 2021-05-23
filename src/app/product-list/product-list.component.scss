@@ -1,0 +1,35 @@
+
+/* box style*/
+.box{
+    border: black solid 1px;
+    height:410px;
+    margin-top: 30px;
+}
+//blue heading
+.blue-head{
+    color:white;
+    background-color: rgb(23, 129, 179);
+    height:50px;
+    padding:10px 0px 10px 20px ;
+}
+div{
+    label{
+        padding:10px ;
+        input{
+            margin-left:80px;
+        }
+    }
+}
+td,th{
+    padding:5px 24px 5px 24px;
+    text-align: center;
+}
+td{
+    border-top: black solid 1px;
+}
+th{
+    color: rgb(23, 129, 179);
+}
+a{
+    text-decoration: none;
+}

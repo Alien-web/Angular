@@ -1,0 +1,30 @@
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #110111;
+  
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+    padding:16px 16px ;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item:hover .nav-link {
+    background-color: #b4b5b6; 
+}
+
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(15, 6, 6);
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item:hover .nav-link {
+    color: #f3e5e5;
+}
+.navbar-brand{
+    padding-left: 10px;
+    font-size: 15px;
+    }

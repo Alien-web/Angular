@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-8 box">
+       <div class="row"> 
+           <div class="col-12 blue-head">Product Detail: {{selectedProduct.name}}</div>
+       </div>
+       <div class="row">
+           <div class="col-2 details">
+              Name: <br>
+              Code: <br>
+              Description: <br>
+              Availability: <br>
+              Price: <br>
+              5 Star Rating: <br>
+              Catagory: <br>
+              Tags: <br>
+           </div>
+           <div class="col-5 details ">
+               {{selectedProduct.name}} <br>
+               {{selectedProduct.code}} <br>
+               {{selectedProduct.description}} <br>
+               {{selectedProduct.availability}} <br>
+               {{selectedProduct.price}} <br>
+               <img src="http://www.simpleimageresizer.com/_uploads/photos/fd4ed8c2/star_2_10.jpg" *ngFor='let in of counter(selectedProduct.rating)'> <br>
+               {{selectedProduct.catagory}} <br>
+               {{selectedProduct.tags}} <br>
+           </div>
+           <div class="col-5 image">
+              <img src="{{selectedProduct.image}}" alt="">
+           </div>
+        </div>
+        <div class="row"> 
+            <div class="col-12 foot">
+                <button class="btn btn-light"> <strong><</strong> Back</button>
+                <button class="btn btn-primary">Edit</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-3"></div>
+   </div>
