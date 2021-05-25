@@ -19,18 +19,21 @@
                {{selectedProduct.description}} <br>
                {{selectedProduct.releaseDate}} <br>
                {{selectedProduct.price}} <br>
-               <img src="http://www.simpleimageresizer.com/_uploads/photos/fd4ed8c2/star_2_10.jpg" *ngFor='let in of counter(selectedProduct.starRating)'> <br>
+               <img src="https://lh3.googleusercontent.com/4Mi3OIddJiio5-aQ4NjjKw7aRN3FjQ_NnCRyD4MHe0u97EU21FL1hbhndMWt9KdezBWWMVA=s17" *ngFor='let in of counter(selectedProduct.starRating)'> <br>
            </div>
            <div class="col-5 image">
               <img src="{{selectedProduct.imageUrl}}" alt="">
            </div>
         </div>
-        <div class="row"> 
-            <div class="col-12 foot">
-                <button class="btn btn-light"> <strong><</strong> Back</button>
-                <button class="btn btn-primary">Edit</button>
-            </div>
+        
+    </div>
+    <div class="row"> 
+        <div class="col-1"></div>
+        <div class="col-8 foot">
+            <button class="btn btn-light"> <strong><</strong> Back</button>
+            <button class="btn btn-primary">Edit</button>
         </div>
+        <div class="col-3"></div>
     </div>
     <div class="col-3"></div>
    </div>
