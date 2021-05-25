@@ -2,7 +2,7 @@
     <div class="col-1"></div>
     <div class="col-8 box">
        <div class="row"> 
-           <div class="col-12 blue-head">Product Detail: {{selectedProduct.name}}</div>
+           <div class="col-12 blue-head">Product Detail: {{selectedProduct.productName}}</div>
        </div>
        <div class="row">
            <div class="col-2 details">
@@ -12,21 +12,17 @@
               Availability: <br>
               Price: <br>
               5 Star Rating: <br>
-              Catagory: <br>
-              Tags: <br>
            </div>
            <div class="col-5 details ">
-               {{selectedProduct.name}} <br>
-               {{selectedProduct.code}} <br>
+               {{selectedProduct.productName}} <br>
+               {{selectedProduct.productCode}} <br>
                {{selectedProduct.description}} <br>
-               {{selectedProduct.availability}} <br>
+               {{selectedProduct.releaseDate}} <br>
                {{selectedProduct.price}} <br>
-               <img src="http://www.simpleimageresizer.com/_uploads/photos/fd4ed8c2/star_2_10.jpg" *ngFor='let in of counter(selectedProduct.rating)'> <br>
-               {{selectedProduct.catagory}} <br>
-               {{selectedProduct.tags}} <br>
+               <img src="http://www.simpleimageresizer.com/_uploads/photos/fd4ed8c2/star_2_10.jpg" *ngFor='let in of counter(selectedProduct.starRating)'> <br>
            </div>
            <div class="col-5 image">
-              <img src="{{selectedProduct.image}}" alt="">
+              <img src="{{selectedProduct.imageUrl}}" alt="">
            </div>
         </div>
         <div class="row"> 

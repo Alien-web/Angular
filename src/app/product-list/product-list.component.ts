@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from '../mock-products';
+import { ProductService } from '../product.service';
+import { Product } from './../product';
 
 @Component({
   selector: 'app-product-list',
@@ -7,13 +8,17 @@ import { Products } from '../mock-products';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products=Products;
+  products:Product[]=[];
+  msg:string="";
   counter(i: number) {
     return new Array(i);
 }
-  constructor() { }
+  constructor(private _productservice:ProductService) { }
 
   ngOnInit(): void {
+    this.getproduct();
   }
-
+  getproduct(){
+   this.products=this._productservice.getProducts();
+  }
 }

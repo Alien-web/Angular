@@ -20,11 +20,11 @@
                </tr>
                <tr *ngFor="let product of products">
                    <td></td>
-                   <td><a [routerLink]="['/product-detail',product.id]" href="">{{product.name}}</a></td>
-                   <td>{{product.code}}</td>
-                   <td>{{product.availability}}</td>
+                   <td><a [routerLink]="['/product-detail',product.productId]" href="">{{product.productName}}</a></td>
+                   <td>{{product.productCode}}</td>
+                   <td>{{product.releaseDate}}</td>
                    <td>${{product.price}}</td>
-                   <td><img src="http://www.simpleimageresizer.com/_uploads/photos/fd4ed8c2/star_2_10.jpg" *ngFor='let in of counter(product.rating)'></td>
+                   <td><img src="http://www.simpleimageresizer.com/_uploads/photos/fd4ed8c2/star_2_10.jpg" *ngFor='let in of counter(product.starRating)'></td>
                    <td><button class="btn btn-primary">Edit</button></td>
                </tr>
            </table>

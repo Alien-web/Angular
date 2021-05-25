@@ -1,5 +1,5 @@
+import { ProductService } from './../product.service';
 import { Product } from './../product';
-import { Products } from './../mock-products';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -11,20 +11,25 @@ import { Observable } from 'rxjs';
 })
 export class ProductDetailsComponent implements OnInit {
   id:any;
-  products=Products;
-  selectedProduct:Product={id:0,name:"",code:"",description:"",availability:"", price:0,rating:0,image:"",catagory:"",tags:[]};
-  constructor(private route: ActivatedRoute) { }
+  products:Product[]=[];
+  selectedProduct:Product={productId:0,productName:"",productCode:"",description:"",releaseDate:"", price:0,starRating:0,imageUrl:""};
+  constructor(private route: ActivatedRoute,private _productservice:ProductService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
+    this.getproduct();
     this.selectProduct(this.id);
   }
   selectProduct(id:number) {
    for(let i=0;i<5;i++){
-     if(this.products[i].id==id)
+     if(this.products[i].productId==id)
      {this.selectedProduct=this.products[i];}
    }
  }
+ getproduct(){
+  this.products=this._productservice.getProducts();
+ }
+ 
  counter(i: number) {
   return new Array(i);
 }

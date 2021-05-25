@@ -1,12 +1,10 @@
-export class Product{
-    id:number=0;
-    name:string=""
-    code:string=""
-    description:string=""
-    availability:string=""
-    price:number=0
-    rating:number=0
-    catagory:string=""
-    tags:string[]=[]
-    image:string=""
+export interface Product{
+    productId:number;
+    productName:string;
+    productCode:string;
+    description:string;
+    releaseDate:string;
+    price:number;
+    starRating:number;
+    imageUrl:string;
 }
