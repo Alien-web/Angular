@@ -9,16 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+ 
   constructor(private router: Router,private _loginservice:LoginService){
     
   }
-
   submit(){
     this._loginservice.loginUser();
     this.router.navigateByUrl('/home');
 }
   ngOnInit(): void {
   }
-
 }

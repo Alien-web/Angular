@@ -10,6 +10,7 @@ import { Product } from './../product';
 export class ProductListComponent implements OnInit {
   products:Product[]=[];
   msg:string="";
+  icons:boolean=false;
   counter(i: number) {
     return new Array(i);
 }
@@ -25,6 +26,10 @@ export class ProductListComponent implements OnInit {
   get(){
     this._productservice.get().subscribe(data=>{
       this.products=data;
+      console.log(this.products)
     });
+  }
+  icon(){
+    this.icons=!this.icons;
   }
 }

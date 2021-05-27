@@ -10,7 +10,7 @@
        <div>
            <table>
                <tr>
-                   <th><button class="btn btn-primary">Show Image</button></th>
+                   <th><button class="btn btn-primary" (click)="icon()">Show Image</button></th>
                    <th>Product</th>
                    <th>Code</th>
                    <th>Availability</th>
@@ -19,7 +19,7 @@
                    <th></th>
                </tr>
                <tr *ngFor="let product of products">
-                   <td></td>
+                   <td><img *ngIf="icons" src="{{product.iconUrl}}" alt="no"></td>
                    <td><a [routerLink]="['/product-detail',product.productId]" href="">{{product.productName}}</a></td>
                    <td>{{product.productCode}}</td>
                    <td>{{product.releaseDate}}</td>
