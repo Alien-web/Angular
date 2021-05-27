@@ -1,3 +1,4 @@
+import { LoginService } from './../login.service';
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router){
+  constructor(private router: Router,private _loginservice:LoginService){
     
   }
 
   submit(){
-    this.router.navigateByUrl('/home')
+    this._loginservice.loginUser();
+    this.router.navigateByUrl('/home');
 }
   ngOnInit(): void {
   }
