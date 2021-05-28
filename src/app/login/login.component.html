@@ -5,8 +5,10 @@
            <div class="col-12 blue-head">Login</div>
            <form>
             <input type="text" id="login" class="login-input"  placeholder="login"><br>
-            <input type="password" id="password" class="login-input" placeholder="password"><br>
-            <input type="submit" (click)="submit()" class="login-input" value="Log In">
+            <input type="password" id="password" class="login-input" placeholder="password"><br><br>
+            <span> New to ACME?<a routerLink="/signup">Signup</a></span><br>
+            <input type="submit" (click)="submit()" class="login-input btn btn-primary" value="Log In"><br>
+           
           </form>
        </div>
      </div>

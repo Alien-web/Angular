@@ -1,0 +1,25 @@
+input.ng-invalid.ng-touched,.errorborder{
+    border: solid red 1px;;
+}
+.error{
+    color: red;
+    span{
+        color: black;
+    }
+}
+.container{
+    margin: 20px;
+}
+.box{
+    border: black solid 1px;
+    margin-top: 30px;
+}
+.blue-head{
+    color:white;
+    background-color: rgb(23, 129, 179);
+    height:50px;
+    padding:10px 0px 10px 20px ;
+}
+button{
+    margin: 10px;
+}
