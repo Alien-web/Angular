@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     // this.getproduct();
     this.get();
+    console.log(this.products)
   }
   // getproduct(){
   //  this.products=this._productservice.getProducts();
@@ -26,7 +27,6 @@ export class ProductListComponent implements OnInit {
   get(){
     this._productservice.get().subscribe(data=>{
       this.products=data;
-      console.log(this.products)
     });
   }
   icon(){

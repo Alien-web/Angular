@@ -35,7 +35,7 @@
                 </label>
                   <span *ngIf="password?.invalid && password?.touched ||(isInvalid && !(password?.touched) )"  class="error">This field is required</span>
             </div>
-             <button type="submit" class="btb btn-primary">Sign Up</button>
+             <button type="submit" [disabled]="signupForm.invalid" class="btb btn-primary">Sign Up</button>
             </div>
         </form>
        </div>
