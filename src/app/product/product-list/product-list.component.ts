@@ -11,10 +11,11 @@ export class ProductListComponent implements OnInit {
   products:Product[]=[];
   msg:string="";
   icons:boolean=false;
+  searchProduct:string="";
   counter(i: number) {
     return new Array(i);
 }
-  constructor(private _productservice:ProductService) { }
+  constructor(private _productservice:ProductService)  {}
 
   ngOnInit(): void {
     // this.getproduct();

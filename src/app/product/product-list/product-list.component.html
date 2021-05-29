@@ -5,7 +5,7 @@
            <div class="col-12 blue-head">Product List</div>
        </div>
        <div>
-           <label>Filter by:<input type="text"></label>
+           <label>Filter by:</label><input [(ngModel)]="searchProduct" placeholder="search by product name ">
        </div>
        <div>
            <table>
@@ -18,12 +18,12 @@
                    <th>5 Star Rating</th>
                    <th></th>
                </tr>
-               <tr *ngFor="let product of products">
+               <tr *ngFor="let product of products| search :searchProduct">
                    <td><img *ngIf="icons" src="{{product.iconUrl}}" alt="no"></td>
                    <td><a [routerLink]="['/product-detail',product.productId]" href="">{{product.productName}}</a></td>
                    <td>{{product.productCode}}</td>
                    <td>{{product.releaseDate}}</td>
-                   <td>${{product.price}}</td>
+                   <td>{{product.price}}</td>
                    <td><img src="https://lh3.googleusercontent.com/4Mi3OIddJiio5-aQ4NjjKw7aRN3FjQ_NnCRyD4MHe0u97EU21FL1hbhndMWt9KdezBWWMVA=s17" *ngFor='let in of counter(product.starRating)'></td>
                    <td><button class="btn btn-primary">Edit</button></td>
                </tr>
