@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-1"></div>
-    <div class="col-9 box">
+    <div class="col-sm-1 col-mg-1 col-lg-1 col-xl-1"></div>
+    <div class="col-sm-9 col-mg-9 col-lg-9 col-xl-9 box">
        <div class="row"> 
-           <div class="col-12 blue-head">Product List</div>
+           <div class="col-sm-12 col-mg-12 col-lg-12 col-xl-12 blue-head">Product List</div>
        </div>
        <div>
-           <label>Filter by:</label><input [(ngModel)]="searchProduct" placeholder="search by product name ">
+           <label>Filter by:</label><input [(ngModel)]="searchProduct" placeholder="product-name-here" >
        </div>
        <div>
            <table>
@@ -20,7 +20,7 @@
                </tr>
                <tr *ngFor="let product of products| search :searchProduct">
                    <td><img *ngIf="icons" src="{{product.iconUrl}}" alt="no"></td>
-                   <td><a [routerLink]="['/product-detail',product.productId]" href="">{{product.productName}}</a></td>
+                   <td><a routerLink={{product.productId}} href="">{{product.productName}}</a></td>
                    <td>{{product.productCode}}</td>
                    <td>{{product.releaseDate}}</td>
                    <td>{{product.price}}</td>
@@ -30,6 +30,6 @@
            </table>
        </div>
     </div>
-    <div class="col-2"></div>
+    <div class="col-sm-2 col-mg-2 col-lg-2 col-xl-2"></div>
    </div>
    <router-outlet></router-outlet>

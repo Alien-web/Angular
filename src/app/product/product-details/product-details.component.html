@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-1"></div>
-    <div class="col-8 box">
+    <div class="col-sm-1 col-mg-1 col-lg-1 col-xl-1"></div>
+    <div class="col-sm-8 col-mg-8 col-lg-8 col-xl-8 box">
        <div class="row"> 
-           <div class="col-12 blue-head">Product Detail: {{selectedProduct.productName}}</div>
+           <div class="col-sm-12 col-mg-12 col-lg-12 col-xl-12 blue-head">Product Detail: {{selectedProduct.productName}}</div>
        </div>
        <div class="row">
-           <div class="col-2 details">
+           <div class="col-sm-2 col-mg-2 col-lg-2 col-xl-2 details">
               Name: <br>
               Code: <br>
               Description: <br>
@@ -13,7 +13,7 @@
               Price: <br>
               5 Star Rating: <br>
            </div>
-           <div class="col-5 details ">
+           <div class="col-sm-5 col-mg-5 col-lg-5 col-xl-5 details ">
                {{selectedProduct.productName}} <br>
                {{selectedProduct.productCode}} <br>
                {{selectedProduct.description}} <br>
@@ -21,19 +21,19 @@
                {{selectedProduct.price}} <br>
                <img src="https://lh3.googleusercontent.com/4Mi3OIddJiio5-aQ4NjjKw7aRN3FjQ_NnCRyD4MHe0u97EU21FL1hbhndMWt9KdezBWWMVA=s17" *ngFor='let in of counter(selectedProduct.starRating)'> <br>
            </div>
-           <div class="col-5 image">
+           <div class="col-sm-5 col-mg-5 col-lg-5 col-xl-5 image">
               <img src="{{selectedProduct.imageUrl}}" alt="not found">
            </div>
         </div>
         
     </div>
     <div class="row"> 
-        <div class="col-1"></div>
-        <div class="col-8 foot">
+        <div class="col-sm-1 col-mg-1 col-lg-1 col-xl-1"></div>
+        <div class="col-sm-8 col-mg-8 col-lg-8 col-xl-8 foot">
             <button class="btn btn-light"  routerLink="/products"> <strong><</strong> Back</button>
             <button class="btn btn-primary">Edit</button>
         </div>
-        <div class="col-3"></div>
+        <div class="col-sm-3 col-mg-3 col-lg-3 col-xl-3"></div>
     </div>
-    <div class="col-3"></div>
+    <div class="col-sm-3 col-mg-3 col-lg-3 col-xl-3"></div>
    </div>

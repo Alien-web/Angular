@@ -1,5 +1,4 @@
 import { LoginService } from './../login.service';
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,14 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
- 
+  username:String="";
+  password:String="";
+  flag:boolean=true;
   constructor(private router: Router,private _loginservice:LoginService){
-    
   }
   submit(){
     this._loginservice.loginUser();
     this.router.navigateByUrl('/home');
 }
   ngOnInit(): void {
+   
   }
 }

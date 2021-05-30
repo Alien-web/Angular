@@ -3,14 +3,22 @@
     <div class="col-4 box">
        <div class="row"> 
            <div class="col-12 blue-head">Login</div>
-           <form>
-            <input type="text" id="login" class="login-input"  placeholder="login"><br>
-            <input type="password" id="password" class="login-input" placeholder="password"><br><br>
-            <span> New to ACME?<a routerLink="/signup">Signup</a></span><br>
-            <input type="submit" (click)="submit()" class="login-input btn btn-primary" value="Log In"><br>
-           
+           <form #loginForm="ngForm">
+             <div class="form-group">
+              <input type="text" id="login" class="login-input form-control" [(ngModel)]="username" required   placeholder="username" name="username" #name="ngModel"><br>
+              <div>
+                <p [hidden]="name.valid || name.untouched" class="alert alert-danger">This field is required</p> 
+              </div>
+            </div>
+             <div class="form-group">
+              <input type="password" id="password" class="login-input form-control" [(ngModel)]="password" required  placeholder="password" name="password" #name2="ngModel"><br><br>
+              <div>
+                <p [hidden]="name2.valid || name2.untouched" class="alert alert-danger">This field is required</p> 
+              </div>
+            </div>
+            <span> New to ACME?<a routerLink="/signup"> Signup</a></span><br>
+            <button class="login-input btn btn-primary" [disabled]="loginForm.invalid" (click)="submit()">Log In</button><br>
           </form>
        </div>
      </div>
 </div>
-

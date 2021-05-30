@@ -1,42 +1,50 @@
 <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4 box">
+    <div class="col-sm-4 col-mg-4 col-lg-4 col-xl-4"></div>
+    <div class="col-sm-4 col-mg-4 col-lg-4 col-xl-4 box">
        <div class="row"> 
-           <div class="col-12 blue-head">Sign Up</div>
+           <div class="col-sm-12 col-mg-12 col-lg-12 col-xl-12 blue-head">Sign Up</div>
            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-            <div class="container">
             <div class="form-group">
                 <label >First Name:
                   <input type="text" class="form-control" [ngClass]="{'errorborder':(isInvalid && !(firstName?.touched) )}" formControlName="firstName" placeholder="firstname">
                 </label>
-                  <span *ngIf="firstName?.invalid && firstName?.touched ||(isInvalid && !(firstName?.touched) )"  class="error">This field is required</span>
+                <div>
+                  <p [hidden]="firstName?.valid || firstName?.untouched" class="alert alert-danger">This field is required</p> 
+                </div>
             </div>
             <div class="form-group">
                 <label >Last Name: 
                   <input type="text" class="form-control" [ngClass]="{'errorborder':(isInvalid && !(lastName?.touched) )}" formControlName="lastName" placeholder="lastname">
                 </label>
-                  <span *ngIf="lastName?.invalid && lastName?.touched||(isInvalid && !(lastName?.touched) ) " class="error">This field is required</span>
+                <div>
+                  <p [hidden]="lastName?.valid || lastName?.untouched" class="alert alert-danger">This field is required</p> 
+                </div>
              </div>
             <div class="form-group">
                 <label >Username:
                   <input type="text" class="form-control" [ngClass]="{'errorborder':(isInvalid && !(username?.touched) )}" formControlName="username" placeholder="username">
                 </label>
-                  <span *ngIf="(username?.invalid && username?.touched )||(isInvalid && !(username?.touched) )"  class="error">This field is required</span>
+                <div>
+                  <p [hidden]="username?.valid || username?.untouched" class="alert alert-danger">This field is required</p> 
+                </div>
             </div>
             <div class="form-group">
                 <label >Email:
                   <input type="email" class="form-control" [ngClass]="{'errorborder':(isInvalid && !(email?.touched) )}" formControlName="email" placeholder="email">
                 </label>
-                  <span *ngIf="email?.invalid && email?.touched ||(isInvalid && !(email?.touched) )"  class="error">This field is required</span>
+                <div>
+                  <p [hidden]="email?.valid || email?.untouched" class="alert alert-danger">This field is required</p> 
+                </div>
             </div>
             <div class="form-group">
                 <label >Password:
                   <input type="password" class="form-control" [ngClass]="{'errorborder':(isInvalid && !(password?.touched) )}" formControlName="password" placeholder="password">
                 </label>
-                  <span *ngIf="password?.invalid && password?.touched ||(isInvalid && !(password?.touched) )"  class="error">This field is required</span>
+                <div>
+                  <p [hidden]="password?.valid || password?.untouched" class="alert alert-danger">This field is required</p> 
+                </div>
             </div>
-             <button type="submit" [disabled]="signupForm.invalid" class="btb btn-primary">Sign Up</button>
-            </div>
+             <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary">Sign Up</button> 
         </form>
        </div>
      </div>
